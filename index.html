@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+      <span class="title">Tic Tac Toe</span>
+      <span class="turn">
+        <span id="current-x" class="active">X</span>
+        <span id="current-o">O</span>
+      </span>
+  </header>
+
+  <div id="grid">
+
+    <div id="result-container">
+      <div id="winner"></div>
+      <div id="win-draw"></div>
+    </div>
+
+    <div id="strikes"></div>
+    <div id="slots"></div>
+
+  </div>
+
+  <div id="restart-btn">Restart</div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

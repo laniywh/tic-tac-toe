@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #222;
+  text-align: center;
+  color: #fff;
+  font-family: sans-serif;
+  user-select: none;
+}
+
+header {
+  font-size: 50px;
+  width: 620px;
+  margin: 0 auto;
+  height: 100px;
+  padding: 20px 0;
+}
+
+.title {
+  float: left;
+}
+.turn {
+  float: right;
+  color: #666;
+}
+.active {
+  color: #fff;
+}
+
+#grid {
+  width: 620px;
+  height: 620px;
+  margin: 0 auto;
+  background: pink;
+  position: relative;
+}
+
+#result-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 620px;
+  height: 620px;
+
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+  transition: all .3s ease-in-out;
+
+  text-transform: uppercase;
+  font-size: 80px;
+
+  background: #222;
+}
+
+#winner {
+  font-size: 250px;
+}
+
+#restart-btn {
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 40px;
+}
+
+#slots {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.slot {
+  width: 200px;
+  height: 200px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: #222;
+  line-height: 200px;
+  font-size: 100px;
+  cursor: pointer;
+}
+
+.slot:nth-child(3n) {
+  margin-right: 0;
+}
+
+#strikes {
+  position: absolute;
+}
+
+.strike {
+  position: absolute;
+  width: 620px;
+  height: 10px;
+  background: #fff;
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .4s ease-in-out;
+}
+
+#strike-0-1-2 {
+  top: 95px;
+}
+
+#strike-3-4-5 {
+  top: 305px;
+}
+
+#strike-6-7-8 {
+  top: 515px;
+}
+
+#strike-0-3-6 {
+  transform: rotate(90deg);
+  top: 305px;
+  left: -210px;
+}
+
+#strike-1-4-7 {
+  transform: rotate(90deg);
+  top: 305px;
+}
+
+#strike-2-5-8 {
+  transform: rotate(90deg);
+  top: 305px;
+  left: 210px;
+}
+
+#strike-0-4-8 {
+  transform: rotate(45deg);
+  top: 305px;
+  left: -110px;
+  width: 840px;
+}
+
+#strike-2-4-6 {
+  transform: rotate(-45deg);
+  top: 305px;
+  left: -110px;
+  width: 840px;
+}
